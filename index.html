@@ -119,7 +119,7 @@
     <div class="control" id="active-control">
       <label><span id="l-active"></span> <span class="val" id="v-active"></span></label>
       <div class="range-wrap">
-        <input type="range" id="s-active" min="1" max="500" value="150" step="1" oninput="update()">
+        <input type="range" id="s-active" min="1" max="500" value="30" step="1" oninput="update()">
         <div class="range-marks" id="marks-active"></div>
       </div>
     </div>
@@ -188,8 +188,8 @@
   <div class="panel full-width">
     <div class="panel-title"><span class="dot" style="background:var(--yellow)"></span><span id="l-sub"></span></div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;">
-      <div class="control"><label><span id="l-outtok"></span> <input class="input-small" id="i-outtok" type="number" value="7.3" min="0.1" max="100" step="0.1" oninput="update()"></label></div>
-      <div class="control"><label><span id="l-intok"></span> <input class="input-small" id="i-intok" type="number" value="17.3" min="0.1" max="200" step="0.1" oninput="update()"></label></div>
+      <div class="control"><label><span id="l-outtok"></span> <input class="input-small" id="i-outtok" type="number" value="100" min="0.1" max="500" step="0.1" oninput="update()"></label></div>
+      <div class="control"><label><span id="l-intok"></span> <input class="input-small" id="i-intok" type="number" value="500" min="0.1" max="2000" step="0.1" oninput="update()"></label></div>
       <div class="control"><label><span id="l-price"></span> <input class="input-small" id="i-price" type="number" value="200" min="1" max="2000" step="1" oninput="update()"></label></div>
     </div>
   </div>
@@ -353,7 +353,7 @@ function compute(){
   const bpp=quantBits===16?2:quantBits===8?1:0.5;
   const avgCtx=+$('s-ctx').value,util=+$('s-util').value/100,eff=+$('s-eff').value/100;
   const cacheHit=+$('s-cache').value/100,gpuPrice=+$('s-gpuprice').value;
-  const outTokM=+$('i-outtok').value||7.3,inTokM=+$('i-intok').value||17.3,subPrice=+$('i-price').value||200;
+  const outTokM=+$('i-outtok').value||100,inTokM=+$('i-intok').value||500,subPrice=+$('i-price').value||200;
 
   const weightGB=totalB*bpp,usable=B200.vram_gb*0.80;
   const minGpus=Math.max(1,Math.ceil(weightGB/usable));
