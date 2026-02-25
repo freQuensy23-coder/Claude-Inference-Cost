@@ -150,7 +150,7 @@
     <div class="control">
       <label><span id="l-gpuprice"></span> <span class="val" id="v-gpuprice"></span></label>
       <div class="range-wrap">
-        <input type="range" id="s-gpuprice" min="0.5" max="7" value="2.5" step="0.1" oninput="update()">
+        <input type="range" id="s-gpuprice" min="2" max="7" value="4" step="0.1" oninput="update()">
         <div class="range-marks" id="marks-gpuprice"></div>
       </div>
     </div>
@@ -215,7 +215,7 @@ en:{
   gpunode:'GPU node (B200 × N)',infra:'Infrastructure',gpuprice:'GPU price',ctx:'Avg context length',
   util:'GPU utilization',eff:'Compute efficiency',subPanel:'Subscription (per user / month)',
   outtok:'Output tokens (M)',intok:'Input tokens (M)',price:'Subscription ($)',
-  mOwn:'$0.5 own',mDI:'$2 DeepInfra',mExp:'$5 cloud',mHyp:'$7 hyper',
+  mDI:'$2.5 DeepInfra',mExp:'$3.5 retail',mHyp:'$7 hyper',
   mNaive:'30% naive',mProd:'65% prod',mIdeal:'90% ideal',
   mNoCache:'0% none',mTypCache:'70% typical',mMaxCache:'95% max',
   gpuNote:(w,m,f)=>`Weights: ${w} GB. Min ${m}× B200 (80% VRAM). ${f?'':'⚠️ Does not fit!'}`,
@@ -228,8 +228,8 @@ en:{
   cGpu:'// GPU cost',cTokHr:'// Tokens/hr (× util',cCache:'cache',
   verdict:'VERDICT',margin:'margin',cost:'cost',profit:'profit',loss:'loss',
   rB200:'192 GB HBM3e, 8 TB/s bandwidth, 4500 TFLOPS FP8 dense.<br><span style="color:var(--text)">Source:</span> NVIDIA datasheet + InferenceMAX v1 benchmarks.',
-  rGpuT:'GPU price ($0.5–$7)',
-  rGpu:'$0.5 — own hardware amortized. <a href="https://deepinfra.com/pricing" target="_blank" style="color:var(--accent2)">DeepInfra B200 — $2.0/hr</a>. $2.5 — min retail (Lambda, DataCrunch). $5–7 — AWS/GCP on-demand.<br><span style="color:var(--text)">Anthropic</span> likely ≈$1–2 (own/reserved clusters).',
+  rGpuT:'GPU price ($2–$7)',
+  rGpu:'<a href="https://deepinfra.com/pricing" target="_blank" style="color:var(--accent2)">DeepInfra B200 — $2.5/hr</a>. $3–4 — retail (Lambda, DataCrunch). $5–7 — AWS/GCP on-demand.',
   rWtT:'weight = params × bytes_per_param',
   rWt:'FP8 = 1 byte/param. 700B model = 700 GB weights.<br>MoE: <b>all</b> experts in VRAM (full size), but compute only on active.',
   rKvT:'KV-cache → batch',
@@ -255,7 +255,7 @@ ru:{
   gpunode:'GPU нода (B200 × N)',infra:'Инфраструктура',gpuprice:'Цена GPU',ctx:'Средний контекст',
   util:'Утилизация GPU',eff:'Эффективность вычислений',subPanel:'Подписка (месяц на юзера)',
   outtok:'Output токенов (M)',intok:'Input токенов (M)',price:'Цена подписки ($)',
-  mOwn:'$0.5 своё',mDI:'$2 DeepInfra',mExp:'$5 дорог.',mHyp:'$7 hyper',
+  mDI:'$2.5 DeepInfra',mExp:'$3.5 розн.',mHyp:'$7 hyper',
   mNaive:'30% наивно',mProd:'65% prod',mIdeal:'90% идеал',
   mNoCache:'0% нет',mTypCache:'70% типично',mMaxCache:'95% макс',
   gpuNote:(w,m,f)=>`Веса: ${w} GB. Мин: ${m}× B200 (80% VRAM). ${f?'':'⚠️ Не помещается!'}`,
@@ -268,8 +268,8 @@ ru:{
   cGpu:'// GPU',cTokHr:'// Токенов/час (× util',cCache:'cache',
   verdict:'ВЕРДИКТ',margin:'маржа',cost:'себестоимость',profit:'прибыль',loss:'убыток',
   rB200:'192 GB HBM3e, 8 TB/s bandwidth, 4500 TFLOPS FP8 dense.<br><span style="color:var(--text)">Источник:</span> NVIDIA datasheet + InferenceMAX v1 бенчмарки.',
-  rGpuT:'Цена GPU ($0.5–$7)',
-  rGpu:'$0.5 — амортизация своего железа. <a href="https://deepinfra.com/pricing" target="_blank" style="color:var(--accent2)">DeepInfra B200 — $2.0/ч</a>. $2.5 — мин. розница (Lambda, DataCrunch). $5–7 — AWS/GCP on-demand.<br><span style="color:var(--text)">Anthropic</span> скорее всего ≈$1–2 (собственные/зарезервированные кластеры).',
+  rGpuT:'Цена GPU ($2–$7)',
+  rGpu:'<a href="https://deepinfra.com/pricing" target="_blank" style="color:var(--accent2)">DeepInfra B200 — $2.5/ч</a>. $3–4 — розница (Lambda, DataCrunch). $5–7 — AWS/GCP on-demand.',
   rWtT:'weight = params × bytes_per_param',
   rWt:'FP8 = 1 байт/параметр. 700B модель = 700 GB весов.<br>MoE: <b>все</b> эксперты в VRAM (полный размер), но compute только на active.',
   rKvT:'KV-cache → batch',
@@ -327,7 +327,7 @@ function renderMarks(id,mn,mx,marks){
 function initMarks(){
   renderMarks('marks-params',7,1800,[{val:7,label:'7B'},{val:70,label:'70B'},{val:405,label:'405B'},{val:700,label:'700B'},{val:1800,label:'1.8T'}]);
   renderMarks('marks-active',1,500,[{val:1,label:'1B'},{val:37,label:'37B DS-R1'},{val:150,label:'150B'},{val:500,label:'500B'}]);
-  renderMarks('marks-gpuprice',0.5,7,[{val:0.5,label:t('mOwn')},{val:2,label:t('mDI')},{val:5,label:t('mExp')},{val:7,label:t('mHyp')}]);
+  renderMarks('marks-gpuprice',2,7,[{val:2.5,label:t('mDI')},{val:4,label:t('mExp')},{val:5,label:'$5'},{val:7,label:t('mHyp')}]);
   renderMarks('marks-ctx',512,200000,[{val:512,label:'512'},{val:4096,label:'4k'},{val:16384,label:'16k'},{val:70000,label:'70k'},{val:200000,label:'200k'}]);
   renderMarks('marks-util',20,100,[{val:20,label:'20%'},{val:50,label:'50%'},{val:70,label:'70%'},{val:90,label:'90%'},{val:100,label:'100%'}]);
   renderMarks('marks-eff',30,90,[{val:30,label:t('mNaive')},{val:65,label:t('mProd')},{val:90,label:t('mIdeal')}]);
