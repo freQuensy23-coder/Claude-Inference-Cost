@@ -1,0 +1,122 @@
+[
+ {
+  "chain": "Tiv Taam",
+  "store_id": "019",
+  "store_name": "רמת החייל",
+  "address": "דבורה הנביאה 122",
+  "file": "PriceFull7290873255550-000-019-20260804-104738.gz",
+  "code": "8435185953711",
+  "name": "משקה מוגז ד\"ר פפר 330 מ\"ל ללא סוכר",
+  "price": "7.90",
+  "plain": true,
+  "matched_by": "barcode"
+ },
+ {
+  "chain": "Tiv Taam",
+  "store_id": "519",
+  "store_name": "ליקוט רמת החייל",
+  "address": "",
+  "file": "PriceFull7290873255550-000-519-20260804-104738.gz",
+  "code": "8435185953711",
+  "name": "משקה מוגז ד\"ר פפר 330 מ\"ל ללא סוכר",
+  "price": "7.90",
+  "plain": true,
+  "matched_by": "barcode"
+ },
+ {
+  "chain": "City Market",
+  "store_id": "040",
+  "store_name": "מתוק בשוק הכרמל בע\"מ, קלישר 3 תל אביב",
+  "address": "מתוק בשוק הכרמל בע\"מ, קלישר 3 תל אביב",
+  "file": "PriceFull7290000000003-040-202608040022",
+  "code": "078000035483",
+  "name": "דר פפר שרי זירו",
+  "price": "8.00",
+  "plain": false,
+  "matched_by": "barcode"
+ },
+ {
+  "chain": "City Market",
+  "store_id": "040",
+  "store_name": "מתוק בשוק הכרמל בע\"מ, קלישר 3 תל אביב",
+  "address": "מתוק בשוק הכרמל בע\"מ, קלישר 3 תל אביב",
+  "file": "PriceFull7290000000003-040-202608040022",
+  "code": "078000037708",
+  "name": "דר פפר קרם תות זירו",
+  "price": "8.00",
+  "plain": false,
+  "matched_by": "barcode"
+ },
+ {
+  "chain": "City Market",
+  "store_id": "040",
+  "store_name": "מתוק בשוק הכרמל בע\"מ, קלישר 3 תל אביב",
+  "address": "מתוק בשוק הכרמל בע\"מ, קלישר 3 תל אביב",
+  "file": "PriceFull7290000000003-040-202608040022",
+  "code": "5449000121028",
+  "name": "דר פפר זירו",
+  "price": "10.00",
+  "plain": true,
+  "matched_by": "barcode"
+ },
+ {
+  "chain": "City Market",
+  "store_id": "040",
+  "store_name": "מתוק בשוק הכרמל בע\"מ, קלישר 3 תל אביב",
+  "address": "מתוק בשוק הכרמל בע\"מ, קלישר 3 תל אביב",
+  "file": "PriceFull7290000000003-040-202608040022",
+  "code": "5449000334237",
+  "name": "דר פפר",
+  "price": "10.00",
+  "plain": false,
+  "matched_by": "barcode"
+ },
+ {
+  "chain": "City Market",
+  "store_id": "040",
+  "store_name": "מתוק בשוק הכרמל בע\"מ, קלישר 3 תל אביב",
+  "address": "מתוק בשוק הכרמל בע\"מ, קלישר 3 תל אביב",
+  "file": "PriceFull7290000000003-040-202608040022",
+  "code": "8435185953711",
+  "name": "ד\"ר פפר זירו",
+  "price": "8.00",
+  "plain": true,
+  "matched_by": "barcode"
+ },
+ {
+  "chain": "City Market",
+  "store_id": "031",
+  "store_name": "מתוק בשוק הכרמל בע\"מ, דניאל 25 תל אביב",
+  "address": "מתוק בשוק הכרמל בע\"מ, דניאל 25 תל אביב",
+  "file": "PriceFull7290000000003-031-202608040028",
+  "code": "5449000121028",
+  "name": "דוקטר פפר",
+  "price": "9.00",
+  "plain": true,
+  "matched_by": "barcode"
+ },
+ {
+  "chain": "City Market",
+  "store_id": "031",
+  "store_name": "מתוק בשוק הכרמל בע\"מ, דניאל 25 תל אביב",
+  "address": "מתוק בשוק הכרמל בע\"מ, דניאל 25 תל אביב",
+  "file": "PriceFull7290000000003-031-202608040028",
+  "code": "8435185953711",
+  "name": "דוקטר זירו",
+  "price": "8.00",
+  "plain": true,
+  "matched_by": "barcode"
+ },
+ {
+  "chain": "City Market",
+  "store_id": "008",
+  "store_name": "סיטי מרקט טאוור בע\"מ, משה דיין 2 תל אביב",
+  "address": "סיטי מרקט טאוור בע\"מ, משה דיין 2 תל אביב",
+  "file": "PriceFull7290000000003-008-202608040717",
+  "code": "8435185953711",
+  "name": "דוקטור פפר זירו",
+  "price": "7.00",
+  "plain": true,
+  "matched_by": "barcode"
+ }
+]
